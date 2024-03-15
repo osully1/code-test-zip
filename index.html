@@ -8,8 +8,61 @@
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-	
-	<script src="script.js"></script>
+  <div class="container">
+    <h1>US Area Info by ZIP Code</h1>
+    <div class="form-container">
+        <label for="zip-input">Enter ZIP Code:</label>
+        <div id="input-container">
+          <input type="text" id="zip-input" placeholder="e.g. 12345">
+        </div>
+        <button onclick="fetchZipCodeData()">Get Info</button>
+    </div>
+    <p class="hidden" id="error-message">Error: Improper entry</p>
+    <div id="all-results-container">
+      <div id="state-image-container">
+        <img id="state-image">
+      </div>
+      <div id="all-data-container">
+        <div class="result-container">
+          <div class="label-container">
+            <p id="zip-label" class="hidden">Zip Code:</p>
+          </div>
+            <p id="postal-code"></p>
+        </div>
+        <br>
+        <div class="result-container">
+          <div class="label-container">
+            <p id="city-label" class="hidden">City:</p>
+          </div>
+          <p id="city"></p>
+        </div>
+        <br>
+        <div class="result-container">
+          <div class="label-container">
+            <p id="state-label" class="hidden">State:</p>
+          </div>
+          <p id="state"></p>
+        </div>
+        <br>
+        <div class="result-container">
+          <div class="label-container">
+            <p id="long-label" class="hidden">Longitude:</p>
+          </div>
+          <p id="longitude"></p>
+        </div>
+        <br>
+        <div class="result-container">
+          <div class="label-container">
+            <p id="lat-label" class="hidden">Latitude:</p>
+          </div>
+          <p id="latitude"></p>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
 
